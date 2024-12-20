@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import DataTable from './pages/Counterparty';
 import './App.css';
 
+import MemoryCachedData from './pages/MemoryCachedData';
+import MemoryCachedSettings from './pages/MemoryCachaedSettings';
+import Sublease from './pages/Sublease';
+
 import AnalyticsPage from './pages/AnalyticsAccounting';
 function Home() {
   return <h2>Home Page</h2>;
@@ -23,6 +27,15 @@ function App() {
             <li>
               <Link to="/analytics">Аналітика</Link>
             </li>
+            <li>
+              <Link to="/MemoryCachedData">MemoryCachedData</Link>
+            </li>
+            <li>
+              <Link to="/MemoryCachedSettings">MemoryCachedSettings</Link>
+            </li>
+            <li>
+              <Link to="/Sublease">Sublease</Link>
+            </li>
           </ul>
         </nav>
 
@@ -30,6 +43,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/counterparty" element={<DataTable />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
+          <Route path="/MemoryCachedData" element={<MemoryCachedData />} />
+          <Route path="/MemoryCachedSettings" element={<MemoryCachedSettings />} />
+          <Route path="/Sublease" element={<Sublease />} />
         </Routes>
       </div>
     </Router>
