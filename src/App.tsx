@@ -16,29 +16,33 @@ function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/counterparty">Контрагенти</Link>
-            </li>
-            <li>
-              <Link to="/analytics">Аналітика</Link>
-            </li>
-            <li>
-              <Link to="/MemoryCachedData">MemoryCachedData</Link>
-            </li>
-            <li>
-              <Link to="/MemoryCachedSettings">MemoryCachedSettings</Link>
-            </li>
-            <li>
-              <Link to="/Sublease">Sublease</Link>
-            </li>
-          </ul>
-        </nav>
-
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Головна</Link>
+          </li>
+          <li>
+            <Link to="/counterparty">Контрагенти</Link>
+          </li>
+          <li>
+            <Link to="/analytics">Аналітика</Link>
+          </li>
+          {/* <li>
+            <a href="#">Memory Cache</a>
+            <ul>
+              <li>
+                <Link to="/MemoryCachedData">MemoryCachedData</Link>
+              </li>
+              <li>
+                <Link to="/MemoryCachedSettings">MemoryCachedSettings</Link>
+              </li>
+            </ul>
+          </li> */}
+          <li>
+            <Link to="/Sublease">Суборенда</Link>
+          </li>
+        </ul>
+      </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/counterparty" element={<DataTable />} />
